@@ -1,0 +1,16 @@
+Package: dawumr
+Type: Package
+Title: Retrieve and Prepare Poll Result Data From the DAWUM API
+Version: 0.1.0.9000
+Author: Ansgar Wolsing
+Maintainer: Ansgar Wolsing <ansgar.wolsing@gmail.com>
+Description: This packages provides functions to retrieve and prepare poll result
+    data from the DAWUM API (dawum.de). Data is under the ODC-ODbL license.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Imports:
+    jsonlite,
+    dplyr,
+    purrr
