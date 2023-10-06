@@ -13,4 +13,5 @@ RoxygenNote: 7.2.3
 Imports:
     jsonlite,
     dplyr,
-    purrr
+    purrr,
+    rlang
