@@ -37,3 +37,21 @@ dawum <- function(denormalize = FALSE, verbose = TRUE) {
   if (verbose) message("DONE.")
   return(db)
 }
+
+
+#' Get DAWUM Data and Return A Data Frame
+#'
+#' @description This function retrieves data from DAWUM API, extracts relevant data
+#'     from the API response and returns a list object with all metadata and
+#'     survey results.
+#'
+#' @param verbose Logical. Should messages be printed? Default: TRUE
+#'
+#' @return
+#' @export
+#'
+#' @examples \dontrun{dawum_dataframe()}
+dawum_dataframe <- function(verbose = TRUE) {
+  obj <- dawum(denormalize = TRUE, verbose = verbose)
+  return(obj$Result)
+}
