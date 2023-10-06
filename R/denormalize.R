@@ -6,7 +6,6 @@
 #'
 #' @return A list object with the DAWUM database, the Result object is denormalized
 #' @import dplyr
-#' @importFrom rlang .data
 denormalize <- function(x, drop_id_vars = TRUE) {
   stopifnot(is.data.frame(x$Results))
   stopifnot("Parliament_ID" %in% colnames(x$Results))
@@ -17,25 +16,25 @@ denormalize <- function(x, drop_id_vars = TRUE) {
   x$Results <- x$Results |>
     dplyr::inner_join(x$Parliaments, by = c("Parliament_ID" = "ID")) |>
     dplyr::rename(
-      Parliament_Name = .data$Name,
-      Parliament_Shortcut = .data$Shortcut
+      Parliament_Name = "Name",
+      Parliament_Shortcut = "Shortcut"
     ) |>
     dplyr::inner_join(x$Institutes, by = c("Institute_ID" = "ID")) |>
     dplyr::rename(
-      Institute_Name = .data$Name
+      Institute_Name = "Name"
     ) |>
     dplyr::inner_join(x$Taskers, by = c("Tasker_ID" = "ID")) |>
     dplyr::rename(
-      Tasker_Name = .data$Name
+      Tasker_Name = "Name"
     ) |>
     dplyr::inner_join(x$Methods, by = c("Method_ID" = "ID")) |>
     dplyr::rename(
-      Method_Name = .data$Name
+      Method_Name = "Name"
     ) |>
     dplyr::inner_join(x$Parties, by = c("Method_ID" = "ID")) |>
     dplyr::rename(
-      Party_Name = .data$Name,
-      Party_Shortcut = .data$Shortcut,
+      Party_Name = "Name",
+      Party_Shortcut = "Shortcut",
     )
 
   # reorder columns
@@ -48,8 +47,8 @@ denormalize <- function(x, drop_id_vars = TRUE) {
   x$Results <- x$Results[col_order]
 
   if (drop_id_vars) {
-    x$Results <- subset(x$Results, select = -c(Parliament_ID, Institute_ID, Tasker_ID, Method_ID,
-                       Party_ID))
+    cols_drop <- c("Parliament_ID", "Institute_ID", "Tasker_ID", "Method_ID", "Party_ID")
+    x$Results <- x$Results[, !(names(x$Results) %in% cols_drop)]
   }
   return(x)
 }
