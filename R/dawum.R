@@ -47,7 +47,7 @@ dawum <- function(denormalize = FALSE, verbose = TRUE) {
 #'
 #' @param verbose Logical. Should messages be printed? Default: TRUE
 #'
-#' @return
+#' @return A data frame with the survey results
 #' @export
 #'
 #' @examples \dontrun{dawum_dataframe()}
