@@ -9,10 +9,10 @@
 generate_result_metadata <- function(x) {
   variable_names <- c("Date", "Surveyed_Persons", "Parliament_ID", "Institute_ID",
                       "Tasker_ID", "Method_ID" )
-  metadata <- purrr::map(variable_names, ~purrr::pluck(obj$Surveys[[1]], .x)) |>
+  metadata <- purrr::map(variable_names, ~purrr::pluck(x, .x)) |>
     purrr::set_names(variable_names) |> dplyr::bind_cols()
-  metadata$Survey_Period_Start <- obj$Surveys[[1]]$Survey_Period$Date_Start
-  metadata$Survey_Period_End <- obj$Surveys[[1]]$Survey_Period$Date_End
+  metadata$Survey_Period_Start <- x$Survey_Period$Date_Start
+  metadata$Survey_Period_End <- x$Survey_Period$Date_End
   # Convert ID variables to integer
   metadata <- metadata |>
     dplyr::mutate(dplyr::across(dplyr::ends_with("ID"),
@@ -29,12 +29,14 @@ generate_result_metadata <- function(x) {
 #' @param x A Survey list object from dawum API data
 #'
 #' @return A data frame with the results from a survey
+#' @importFrom purrr reduce
 #' @export
 #'
 #' @examples \dontrun{generate_result_dataframe(x)}
 generate_result_dataframe <- function(x) {
   result <- data.frame(
-    share = cbind(x$Results)
+    # TODO: Which of these steps are required?
+    Share = cbind(x$Results) |> purrr::reduce(c) |> unlist() |> as.numeric()
   )
   result$Party_ID <- as.numeric(rownames(result))
   rownames(result) <- NULL
