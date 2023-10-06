@@ -37,10 +37,19 @@ denormalize <- function(x, drop_id_vars = TRUE) {
       Party_Name = .data$Name,
       Party_Shortcut = .data$Shortcut,
     )
+
+  # reorder columns
+  col_order <- c("ID", "Date", "Parliament_Shortcut", "Parliament_Name",
+                 "Election", "Institute_Name",
+                 "Party_Shortcut", "Party_Name", "Share", "Tasker_Name",
+                 "Surveyed_Persons", "Survey_Period_Start", "Survey_Period_End",
+                 "Parliament_ID", "Institute_ID", "Tasker_ID", "Method_ID",
+                 "Party_ID")
+  x$Results <- x$Results[col_order]
+
   if (drop_id_vars) {
-    x <- x |>
-      dplyr::select(-c("Parliament_ID", "Institute_ID", "Tasker_ID", "Method_ID",
-                       "Party_ID"))
+    x$Results <- subset(x$Results, select = -c(Parliament_ID, Institute_ID, Tasker_ID, Method_ID,
+                       Party_ID))
   }
   return(x)
 }
