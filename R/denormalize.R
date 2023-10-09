@@ -31,7 +31,7 @@ denormalize <- function(x, drop_id_vars = TRUE) {
     dplyr::rename(
       Method_Name = "Name"
     ) |>
-    dplyr::inner_join(x$Parties, by = c("Method_ID" = "ID")) |>
+    dplyr::inner_join(x$Parties, by = c("Party_ID" = "ID")) |>
     dplyr::rename(
       Party_Name = "Name",
       Party_Shortcut = "Shortcut",
