@@ -6,13 +6,15 @@ DAWUM ("Darstellung und Auswertung von Wahlumfragen") collects election poll res
 
 ## Installation
 
-```{# install.packages("devtools")}
+```{r}
+# install.packages("devtools")
 devtools::install_github("https://github.com/bydata/dawumr/")
 ```
 
 ## Basic functionality
 
-```{# Pull all available data (returns the full database with separate tables for results, institutes etc.)}
+```{r}
+# Pull all available data (returns the full database with separate tables for results, institutes etc.)
 dawum_db <- pull_dawum()
 
 # Pull all available data, return only the dataframe with the poll results
