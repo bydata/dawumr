@@ -26,6 +26,10 @@ dawum_df <- pull_dawum_dataframe(newest_only = TRUE)
 
 ```
 
+## Motivation
+
+Many thanks to Timon Scheuer for giving me the idea.
+
 ## License
 
 Source: Data from dawum.de License: <https://dawum.de/API/#Lizenz>, ODC Open Database License (ODC-ODbL)
