@@ -1,5 +1,11 @@
 # R API for DAWUM ("Darstellung und Auswertung von Wahlumfragen")
 
+<!-- badges: start -->
+
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+
+<!-- badges: end -->
+
 **dawumr** provides convenience functions to pull and transform the election poll data from [dawum.de](https://dawum.de/) using R.
 
 DAWUM ("Darstellung und Auswertung von Wahlumfragen") collects election poll results from at the national level ("Bundestag") and federal state level ("Landtag"/"Abgeordnetenhaus") in Germany conducted by various institutes. The database goes back to 2017.
