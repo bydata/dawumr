@@ -1,8 +1,10 @@
-#' Get DAWUM Data
+#' Pull DAWUM Data
 #'
 #' @description This function retrieves data from DAWUM API, extracts relevant data
 #'     from the API response and returns a list object with all metadata and
 #'     survey results.
+#' @param newest_only Logical. Retrieve only the newest data per institute and
+#'     parliament/election.
 #' @param denormalize Logical. Should the names of parties, institutes etc. be
 #'    added to the results data frame? Default: TRUE
 #' @param verbose Logical. Should messages be printed? Default: TRUE
@@ -11,12 +13,16 @@
 #' @importFrom purrr map_dfr
 #' @export
 #'
-#' @examples \dontrun{dawum()}
-dawum <- function(denormalize = FALSE, verbose = TRUE) {
+#' @examples \dontrun{pull_dawum()}
+pull_dawum <- function(newest_only = FALSE, denormalize = FALSE, verbose = TRUE) {
 
   # Retrieve data from API
   if (verbose) message("Retrieving data from DAWUM API.")
-  obj <- retrieve_data()
+  if (newest_only) {
+    obj <- retrieve_newest_data()
+  } else {
+    obj <- retrieve_data()
+  }
 
   # Extract last update date
   db <- get_metadata_tables(obj)
@@ -39,19 +45,20 @@ dawum <- function(denormalize = FALSE, verbose = TRUE) {
 }
 
 
-#' Get DAWUM Data and Return A Data Frame
+#' Pull DAWUM Data and Return A Data Frame
 #'
 #' @description This function retrieves data from DAWUM API, extracts relevant data
 #'     from the API response and returns a list object with all metadata and
 #'     survey results.
-#'
+#' @param newest_only Logical. Retrieve only the newest data per institute and
+#'     parliament/election.
 #' @param verbose Logical. Should messages be printed? Default: TRUE
 #'
 #' @return A data frame with the survey results
 #' @export
 #'
 #' @examples \dontrun{dawum_dataframe()}
-dawum_dataframe <- function(verbose = TRUE) {
-  obj <- dawum(denormalize = TRUE, verbose = verbose)
+pull_dawum_dataframe <- function(newest_only = FALSE, verbose = TRUE) {
+  obj <- pull_dawum(newest_only = newest_only, denormalize = TRUE, verbose = verbose)
   return(obj$Result)
 }
