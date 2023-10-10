@@ -5,37 +5,36 @@
 #'     dropped after adding the corresponding names? Default: TRUE
 #'
 #' @return A list object with the DAWUM database, the Result object is denormalized
-#' @import dplyr
 denormalize <- function(x, drop_id_vars = TRUE) {
-  stopifnot(is.data.frame(x$Results))
-  stopifnot("Parliament_ID" %in% colnames(x$Results))
-  stopifnot("Institute_ID" %in% colnames(x$Results))
-  stopifnot("Tasker_ID" %in% colnames(x$Results))
-  stopifnot("Method_ID" %in% colnames(x$Results))
-  stopifnot("Party_ID" %in% colnames(x$Results))
-  x$Results <- x$Results |>
-    dplyr::inner_join(x$Parliaments, by = c("Parliament_ID" = "ID")) |>
-    dplyr::rename(
-      Parliament_Name = "Name",
-      Parliament_Shortcut = "Shortcut"
-    ) |>
-    dplyr::inner_join(x$Institutes, by = c("Institute_ID" = "ID")) |>
-    dplyr::rename(
-      Institute_Name = "Name"
-    ) |>
-    dplyr::inner_join(x$Taskers, by = c("Tasker_ID" = "ID")) |>
-    dplyr::rename(
-      Tasker_Name = "Name"
-    ) |>
-    dplyr::inner_join(x$Methods, by = c("Method_ID" = "ID")) |>
-    dplyr::rename(
-      Method_Name = "Name"
-    ) |>
-    dplyr::inner_join(x$Parties, by = c("Party_ID" = "ID")) |>
-    dplyr::rename(
-      Party_Name = "Name",
-      Party_Shortcut = "Shortcut",
-    )
+  results <- x$Results
+  stopifnot(is.data.frame(results))
+  stopifnot("Parliament_ID" %in% colnames(results))
+  stopifnot("Institute_ID" %in% colnames(results))
+  stopifnot("Tasker_ID" %in% colnames(results))
+  stopifnot("Method_ID" %in% colnames(results))
+  stopifnot("Party_ID" %in% colnames(results))
+
+  # Parliaments
+  results <- merge(results, x$Parliaments, by.x = "Parliament_ID", by.y = "ID")
+  colnames(results)[colnames(results) == "Name"] <- "Parliament_Name"
+  colnames(results)[colnames(results) == "Shortcut"] <- "Parliament_Shortcut"
+
+  # Institutes
+  results <- merge(results, x$Institutes, by.x = "Institute_ID", by.y = "ID")
+  colnames(results)[colnames(results) == "Name"] <- "Institute_Name"
+
+  # Taskers
+  results <- merge(results, x$Taskers, by.x = "Tasker_ID", by.y = "ID")
+  colnames(results)[colnames(results) == "Name"] <- "Tasker_Name"
+
+  # Methods
+  results <- merge(results, x$Methods, by.x = "Method_ID", by.y = "ID")
+  colnames(results)[colnames(results) == "Name"] <- "Method_Name"
+
+  # Parties
+  results <- merge(results, x$Parties, by.x = "Party_ID", by.y = "ID")
+  colnames(results)[colnames(results) == "Name"] <- "Party_Name"
+  colnames(results)[colnames(results) == "Shortcut"] <- "Party_Shortcut"
 
   # reorder columns
   col_order <- c("ID", "Date", "Parliament_Shortcut", "Parliament_Name",
@@ -44,11 +43,12 @@ denormalize <- function(x, drop_id_vars = TRUE) {
                  "Surveyed_Persons", "Survey_Period_Start", "Survey_Period_End",
                  "Parliament_ID", "Institute_ID", "Tasker_ID", "Method_ID",
                  "Party_ID")
-  x$Results <- x$Results[col_order]
+  results <- results[col_order]
 
   if (drop_id_vars) {
     cols_drop <- c("Parliament_ID", "Institute_ID", "Tasker_ID", "Method_ID", "Party_ID")
-    x$Results <- x$Results[, !(names(x$Results) %in% cols_drop)]
+    results <- results[, !(names(results) %in% cols_drop)]
   }
+  x$Results <- results
   return(x)
 }
