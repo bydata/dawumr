@@ -8,7 +8,7 @@
 
 **dawumr** provides convenience functions to pull and transform the election poll data from [dawum.de](https://dawum.de/) using R.
 
-DAWUM ("Darstellung und Auswertung von Wahlumfragen") collects election poll results from at the national level ("Bundestag") and federal state level ("Landtag"/"Abgeordnetenhaus") in Germany as well as polls for the European Parliament conducted by various institutes. The database goes back to 2017.
+DAWUM ("Darstellung und Auswertung von Wahlumfragen") collects election poll results at the national level ("Bundestag") and federal state level ("Landtag"/"Abgeordnetenhaus") in Germany as well as polls for the European Parliament conducted by various institutes. The database goes back to 2017.
 
 ## Installation
 
@@ -35,12 +35,12 @@ dawum_df <- pull_dawum_dataframe(newest_only = TRUE)
 
 The DAWUM database covers polls for the national election in Germany, elections in the 16 German federal states, and the European Parliament conducted by a variety of institutes.
 
-This package pulls all available data, but makes no judgement of the quality of the polls or the institutes. It is up to the user to decide which institutes to include.
+This package pulls all available data, but makes no judgement of the quality of the polls or the institutes. It is up to the user to decide which institutes to include in their analyses.
 
 The table provides an overview of elections and institutes covered (as of 2023-10-07):
 
 | Institute                  | Bundestag |  EU |  BW |  BY |  BE |  BB |  HB |  HH |  HE |  MV |  NI | NRW |  RP |  SL |  SN |  ST |  SH |  TH |
-|:---------------|-------:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+|:---------------------------|----------:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|
 | Allensbach                 |        84 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   3 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
 | Civey                      |       112 |   4 |   1 |  30 |  18 |   6 |   0 |   4 |   7 |   1 |   4 |   6 |   1 |   0 |   9 |   1 |   1 |   5 |
 | Forsa                      |       347 |   1 |   2 |  13 |  37 |   6 |   0 |   3 |   1 |   8 |  10 |  15 |   1 |   1 |   0 |   0 |   0 |   1 |
