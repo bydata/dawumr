@@ -12,6 +12,8 @@ DAWUM ("Darstellung und Auswertung von Wahlumfragen") collects election poll res
 
 ## Installation
 
+The package can be installed from Github as a source package.
+
 ```{r}
 # install.packages("devtools")
 devtools::install_github("https://github.com/bydata/dawumr/")
@@ -19,15 +21,27 @@ devtools::install_github("https://github.com/bydata/dawumr/")
 
 ## Basic functionality
 
+The typical use case is probably to pull all survey results as a data frame.
+
 ```{r}
-# Pull all available data (returns the full database with separate tables for results, institutes etc.)
+# Pull all available data, return only the data frame with the poll results
+dawum_df <- pull_dawum_dataframe()
+```
+
+Set the argument `newest_only` to TRUE to pull only the latest results by election and institute.
+
+```{r}
+# Pull only the most recent polls for each election and institute
+dawum_db <- pull_dawum(newest_only = TRUE)
+```
+
+You can also get the database as a list object with separate tables for institutes, parliaments etc. so that you can join tables for your specific purposes.
+
+```{r}
+# Pull all available data
 dawum_db <- pull_dawum()
 
-# Pull all available data, return only the dataframe with the poll results
-dawum_df <- pull_dawum_dataframe()
-
 # Pull only the most recent polls for each parliament and institute
-dawum_db <- pull_dawum(newest_only = TRUE)
 dawum_df <- pull_dawum_dataframe(newest_only = TRUE)
 ```
 
@@ -61,5 +75,4 @@ Many thanks to Timon Scheuer for the inspiration and support with early bugfixin
 
 ## License
 
-Source: Data from dawum.de.
-License: <https://dawum.de/API/#Lizenz>, ODC Open Database License (ODC-ODbL)
+Source: Data from dawum.de. License: <https://dawum.de/API/#Lizenz>, ODC Open Database License (ODC-ODbL)
