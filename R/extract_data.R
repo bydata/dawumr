@@ -1,12 +1,12 @@
-#' Generate metadata from Survey list object
+#' Extract metadata from Survey list object
 #'
 #' @param x A Survey list object from dawum API data
 #'
 #' @return A data frame with survey metadata (1 row, 8 columns)
 #' @export
 #'
-#' @examples \dontrun{generate_result_metadata(x)}
-generate_result_metadata <- function(x) {
+#' @examples \dontrun{extract_result_metadata(x)}
+extract_result_metadata <- function(x) {
   variable_names <- c("Date", "Surveyed_Persons", "Parliament_ID", "Institute_ID",
                       "Tasker_ID", "Method_ID")
 
@@ -24,17 +24,17 @@ generate_result_metadata <- function(x) {
 }
 
 
-#' Generate survey result data from Survey list object
+#' Extract survey result data from Survey list object
 #'
-#' @description Generate survey result data from Survey list object.
+#' @description Extract survey result data from Survey list object.
 #'     Each record represents the survey result for a party.
 #' @param x A Survey list object from dawum API data
 #'
 #' @return A data frame with the results from a survey
 #' @export
 #'
-#' @examples \dontrun{generate_result_dataframe(x)}
-generate_result_dataframe <- function(x) {
+#' @examples \dontrun{extract_result_dataframe(x)}
+extract_result_dataframe <- function(x) {
   result <- data.frame(
     Party_ID = names(x$Results),
     Share = as.numeric(unlist(x$Results))
@@ -45,7 +45,7 @@ generate_result_dataframe <- function(x) {
 
 generate_result <- function(x) {
   data.frame(
-    generate_result_metadata(x),
-    generate_result_dataframe(x)
+    extract_result_metadata(x),
+    extract_result_dataframe(x)
   )
 }
