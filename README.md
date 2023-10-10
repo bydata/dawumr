@@ -55,9 +55,9 @@ The table provides an overview of elections and institutes covered (as of 2023-1
 
 \* Other: Institutes are named in the dataset and are grouped for this overview only.
 
-## Motivation
+## Contributions
 
-Many thanks to Timon Scheuer for giving me the idea.
+Many thanks to Timon Scheuer for the inspiration and support with early bugfixing.
 
 ## License
 
