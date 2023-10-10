@@ -12,5 +12,4 @@ LazyData: true
 RoxygenNote: 7.2.3
 Imports:
     jsonlite,
-    dplyr,
-    purrr
+    dplyr

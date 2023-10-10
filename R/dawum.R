@@ -10,7 +10,6 @@
 #' @param verbose Logical. Should messages be printed? Default: TRUE
 #'
 #' @return A list object which contains all metadata and survey results
-#' @importFrom purrr map_dfr
 #' @export
 #'
 #' @examples \dontrun{pull_dawum()}
@@ -31,7 +30,16 @@ pull_dawum <- function(newest_only = FALSE, denormalize = FALSE, verbose = TRUE)
 
   # Extract results
   if (verbose) message("Extracting survey results.")
-  db$Results <- purrr::map_dfr(obj$Surveys, generate_result, .id = "ID")
+  # db$Results <- purrr::map_dfr(obj$Surveys, generate_result, .id = "ID")
+  results_list <- lapply(
+    names(obj$Surveys),
+    function(survey_name) {
+      survey <- obj$Surveys[[survey_name]]
+      result <- generate_result(survey)
+      result$ID <- survey_name
+      return(result)
+    })
+  db$Results <- do.call(rbind, results_list)
 
   # Denormalize tables - this will add names for parties, parliaments etc. to the
   # data frame // default: FALSE
