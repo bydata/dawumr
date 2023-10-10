@@ -3,7 +3,6 @@
 #' @param x A Survey list object from dawum API data
 #'
 #' @return A data frame with survey metadata (1 row, 8 columns)
-#' @export
 #'
 #' @examples \dontrun{extract_result_metadata(x)}
 extract_result_metadata <- function(x) {
@@ -31,7 +30,6 @@ extract_result_metadata <- function(x) {
 #' @param x A Survey list object from dawum API data
 #'
 #' @return A data frame with the results from a survey
-#' @export
 #'
 #' @examples \dontrun{extract_result_dataframe(x)}
 extract_result_dataframe <- function(x) {
@@ -43,7 +41,15 @@ extract_result_dataframe <- function(x) {
 }
 
 
-generate_result <- function(x) {
+#' Wrapper function to extract result data and survey metadata
+#'
+#' @param x A Survey list object from dawum API data
+#'
+#' @return A dataframe with survey results and metadata
+#' @export
+#'
+#' @examples
+extract_result <- function(x) {
   data.frame(
     extract_result_metadata(x),
     extract_result_dataframe(x)

@@ -35,7 +35,7 @@ pull_dawum <- function(newest_only = FALSE, denormalize = FALSE, verbose = TRUE)
     names(obj$Surveys),
     function(survey_name) {
       survey <- obj$Surveys[[survey_name]]
-      result <- generate_result(survey)
+      result <- extract_result(survey)
       result$ID <- survey_name
       return(result)
     })
