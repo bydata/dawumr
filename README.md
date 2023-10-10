@@ -40,7 +40,7 @@ This package pulls all available data, but makes no judgement of the quality of 
 The table provides an overview of elections and institutes covered (as of 2023-10-07):
 
 | Institute                  | Bundestag |  EU |  BW |  BY |  BE |  BB |  HB |  HH |  HE |  MV |  NI | NRW |  RP |  SL |  SN |  ST |  SH |  TH |
-|:---------------------------|----------:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|
+|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Allensbach                 |        84 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   3 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
 | Civey                      |       112 |   4 |   1 |  30 |  18 |   6 |   0 |   4 |   7 |   1 |   4 |   6 |   1 |   0 |   9 |   1 |   1 |   5 |
 | Forsa                      |       347 |   1 |   2 |  13 |  37 |   6 |   0 |   3 |   1 |   8 |  10 |  15 |   1 |   1 |   0 |   0 |   0 |   1 |
@@ -61,4 +61,5 @@ Many thanks to Timon Scheuer for giving me the idea.
 
 ## License
 
-Source: Data from dawum.de License: <https://dawum.de/API/#Lizenz>, ODC Open Database License (ODC-ODbL)
+Source: Data from dawum.de.
+License: <https://dawum.de/API/#Lizenz>, ODC Open Database License (ODC-ODbL)
