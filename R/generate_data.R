@@ -36,12 +36,9 @@ generate_result_metadata <- function(x) {
 #' @examples \dontrun{generate_result_dataframe(x)}
 generate_result_dataframe <- function(x) {
   result <- data.frame(
-    Share = cbind(x$Results) |> unlist() |> as.numeric()
+    Party_ID = names(x$Results),
+    Share = as.numeric(unlist(x$Results))
   )
-  result$Party_ID <- as.numeric(rownames(result))
-  rownames(result) <- NULL
-  result <- result[c(2, 1)]
-
   return(result)
 }
 
