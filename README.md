@@ -71,7 +71,7 @@ The table provides an overview of elections and institutes covered (as of 2023-1
 
 ## Contributions
 
-Many thanks to @timonscheuer for the inspiration and support with early bugfixing.
+Many thanks to [@timonscheuer](https://github.com/timonscheuer) for the inspiration and support with early bugfixing.
 
 ## License
 
