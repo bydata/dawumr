@@ -51,10 +51,10 @@ The DAWUM database covers polls for the national election in Germany, elections 
 
 This package pulls all available data, but makes no judgement of the quality of the polls or the institutes. It is up to the user to decide which institutes to include in their analyses.
 
-The table provides an overview of elections and institutes covered (as of 2023-10-07):
+The table provides an overview of elections and institutes covered (as of 2024-02-03):
 
 | Institute_Name_grp         | Bundestag |  EU |  BW |  BY |  BE |  BB |  HB |  HH |  HE |  MV |  NI | NRW |  RP |  SL |  SN |  ST |  SH |  TH |
-|:---------------------------|----------:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|
+|:------|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Allensbach                 |        88 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   3 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
 | Civey                      |       112 |   4 |   1 |  31 |  18 |   6 |   0 |   4 |   7 |   1 |   4 |   6 |   1 |   0 |  11 |   1 |   1 |   5 |
 | Forsa                      |       362 |   1 |   2 |  13 |  37 |   7 |   0 |   3 |   1 |   9 |  10 |  15 |   1 |   1 |   1 |   0 |   0 |   2 |
