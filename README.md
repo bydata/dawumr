@@ -32,7 +32,7 @@ Set the argument `newest_only` to TRUE to pull only the latest results by electi
 
 ```{r}
 # Pull only the most recent polls for each election and institute
-dawum_db <- pull_dawum(newest_only = TRUE)
+dawum_db <- pull_dawum_dataframe(newest_only = TRUE)
 ```
 
 You can also get the database as a list object with separate tables for institutes, parliaments etc. so that you can join tables for your specific purposes.
@@ -42,7 +42,7 @@ You can also get the database as a list object with separate tables for institut
 dawum_db <- pull_dawum()
 
 # Pull only the most recent polls for each parliament and institute
-dawum_df <- pull_dawum_dataframe(newest_only = TRUE)
+dawum_df <- pull_dawum(newest_only = TRUE)
 ```
 
 ## Institutes and Parliaments
@@ -54,7 +54,7 @@ This package pulls all available data, but makes no judgement of the quality of 
 The table provides an overview of elections and institutes covered (as of 2023-10-07):
 
 | Institute                  | Bundestag |  EU |  BW |  BY |  BE |  BB |  HB |  HH |  HE |  MV |  NI | NRW |  RP |  SL |  SN |  ST |  SH |  TH |
-|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+|:---------------------------|----------:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|
 | Allensbach                 |        84 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   3 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
 | Civey                      |       112 |   4 |   1 |  30 |  18 |   6 |   0 |   4 |   7 |   1 |   4 |   6 |   1 |   0 |   9 |   1 |   1 |   5 |
 | Forsa                      |       347 |   1 |   2 |  13 |  37 |   6 |   0 |   3 |   1 |   8 |  10 |  15 |   1 |   1 |   0 |   0 |   0 |   1 |
@@ -71,7 +71,7 @@ The table provides an overview of elections and institutes covered (as of 2023-1
 
 ## Contributions
 
-Many thanks to [@timonscheuer](https://github.com/timonscheuer) for the inspiration and support with early bugfixing.
+Many thanks to [\@timonscheuer](https://github.com/timonscheuer) for the inspiration and support with early bugfixing.
 
 ## License
 
