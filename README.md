@@ -53,19 +53,19 @@ This package pulls all available data, but makes no judgement of the quality of 
 
 The table provides an overview of elections and institutes covered (as of 2023-10-07):
 
-| Institute                  | Bundestag |  EU |  BW |  BY |  BE |  BB |  HB |  HH |  HE |  MV |  NI | NRW |  RP |  SL |  SN |  ST |  SH |  TH |
+| Institute_Name_grp         | Bundestag |  EU |  BW |  BY |  BE |  BB |  HB |  HH |  HE |  MV |  NI | NRW |  RP |  SL |  SN |  ST |  SH |  TH |
 |:---------------------------|----------:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|
-| Allensbach                 |        84 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   3 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
-| Civey                      |       112 |   4 |   1 |  30 |  18 |   6 |   0 |   4 |   7 |   1 |   4 |   6 |   1 |   0 |   9 |   1 |   1 |   5 |
-| Forsa                      |       347 |   1 |   2 |  13 |  37 |   6 |   0 |   3 |   1 |   8 |  10 |  15 |   1 |   1 |   0 |   0 |   0 |   1 |
-| Forschungsgruppe Wahlen    |       131 |   7 |   3 |   6 |   4 |   2 |   5 |   2 |  10 |   2 |   4 |   5 |   3 |   4 |   2 |   2 |   4 |   2 |
-| GMS                        |        61 |   0 |   0 |  40 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   1 |   0 |   0 |
-| Infratest dimap            |       163 |   5 |  19 |  18 |  18 |  16 |   8 |   6 |  14 |  10 |  11 |  22 |  26 |   8 |   6 |   6 |  12 |  14 |
-| INSA                       |       477 |   9 |  16 |  21 |  23 |   9 |   5 |   2 |  11 |  10 |  12 |  14 |   9 |   7 |  14 |   8 |  10 |  38 |
-| Institut Wahlkreisprognose |        42 |   2 |  10 |  20 |  17 |   8 |  12 |   3 |  22 |   6 |  16 |  14 |   7 |   8 |   8 |   4 |  12 |   7 |
-| Kantar (Emnid)             |       338 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
-| YouGov                     |        88 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   5 |   0 |   0 |   0 |   0 |   0 |   0 |
-| Other\*                    |        49 |   1 |   0 |   0 |   0 |   3 |   1 |   9 |   0 |   0 |   1 |   2 |   1 |   0 |   7 |   1 |   0 |   0 |
+| Allensbach                 |        88 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   3 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
+| Civey                      |       112 |   4 |   1 |  31 |  18 |   6 |   0 |   4 |   7 |   1 |   4 |   6 |   1 |   0 |  11 |   1 |   1 |   5 |
+| Forsa                      |       362 |   1 |   2 |  13 |  37 |   7 |   0 |   3 |   1 |   9 |  10 |  15 |   1 |   1 |   1 |   0 |   0 |   2 |
+| Forschungsgruppe Wahlen    |       137 |   7 |   3 |   6 |   4 |   2 |   5 |   2 |  10 |   2 |   4 |   5 |   3 |   4 |   2 |   2 |   4 |   2 |
+| GMS                        |        63 |   0 |   0 |  41 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   1 |   0 |   0 |
+| Infratest dimap            |       170 |   5 |  20 |  19 |  19 |  16 |   8 |   6 |  14 |  10 |  12 |  23 |  27 |   8 |   7 |   6 |  12 |  14 |
+| INSA                       |       511 |   9 |  16 |  21 |  24 |  10 |   5 |   2 |  11 |  10 |  13 |  14 |   9 |   7 |  14 |   9 |  11 |  40 |
+| Institut Wahlkreisprognose |        46 |   3 |  11 |  20 |  17 |   9 |  12 |   3 |  22 |   7 |  16 |  14 |   8 |   8 |  10 |   5 |  12 |   8 |
+| Verian (Emnid)             |       351 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
+| YouGov                     |        92 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   5 |   0 |   0 |   0 |   0 |   0 |   0 |
+| Other\*                    |        54 |   1 |   0 |   0 |   0 |   3 |   1 |  10 |   0 |   0 |   1 |   2 |   1 |   0 |   7 |   1 |   0 |   0 |
 
 \* Other: Institutes are named in the dataset and are grouped for this overview only.
 
