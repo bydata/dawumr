@@ -68,5 +68,8 @@ pull_dawum <- function(newest_only = FALSE, denormalize = FALSE, verbose = TRUE)
 #' @examples \dontrun{dawum_dataframe()}
 pull_dawum_dataframe <- function(newest_only = FALSE, verbose = TRUE) {
   obj <- pull_dawum(newest_only = newest_only, denormalize = TRUE, verbose = verbose)
+  obj$Result$Date <- as.Date(obj$Result$Date)
+  obj$Result$Survey_Period_Start <- as.Date(obj$Result$Survey_Period_Start)
+  obj$Result$Survey_Period_End <- as.Date(obj$Result$Survey_Period_End)
   return(obj$Result)
 }
