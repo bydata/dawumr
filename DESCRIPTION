@@ -1,7 +1,7 @@
 Package: dawumr
 Type: Package
 Title: Retrieve and Prepare Poll Result Data From the DAWUM API
-Version: 0.1.0.9004
+Version: 0.1.0.9005
 Author: Ansgar Wolsing
 Maintainer: Ansgar Wolsing <ansgar.wolsing@gmail.com>
 Description: This packages provides functions to retrieve and prepare poll result
