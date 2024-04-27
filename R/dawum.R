@@ -30,7 +30,6 @@ pull_dawum <- function(newest_only = FALSE, denormalize = FALSE, verbose = TRUE)
 
   # Extract results
   if (verbose) message("Extracting survey results.")
-  # db$Results <- purrr::map_dfr(obj$Surveys, generate_result, .id = "ID")
   results_list <- lapply(
     names(obj$Surveys),
     function(survey_name) {
