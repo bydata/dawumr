@@ -46,9 +46,6 @@ extract_result_dataframe <- function(x) {
 #' @param x A Survey list object from dawum API data
 #'
 #' @return A dataframe with survey results and metadata
-#' @export
-#'
-#' @examples
 extract_result <- function(x) {
   data.frame(
     extract_result_metadata(x),
