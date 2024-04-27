@@ -1,4 +1,4 @@
-#' Title
+#' Denormalize the database
 #'
 #' @param x A list object with the DAWUM database
 #' @param drop_id_vars Shall the ID variables (e.g. Party ID, Parliament ID) be
