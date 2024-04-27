@@ -2,7 +2,7 @@
 % Please edit documentation in R/denormalize.R
 \name{denormalize}
 \alias{denormalize}
-\title{Title}
+\title{Denormalize the database}
 \usage{
 denormalize(x, drop_id_vars = TRUE)
 }
@@ -16,5 +16,5 @@ dropped after adding the corresponding names? Default: TRUE}
 A list object with the DAWUM database, the Result object is denormalized
 }
 \description{
-Title
+Denormalize the database
 }
