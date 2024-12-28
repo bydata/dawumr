@@ -5,7 +5,6 @@
 #'
 #' @return A list object
 #' @importFrom dplyr bind_rows
-#' @export
 #'
 #' @examples \dontrun{get_metadata_tables(x)}
 get_metadata_tables <- function(x) {

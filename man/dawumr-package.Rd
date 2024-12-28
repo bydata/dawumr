@@ -7,6 +7,7 @@
 \description{
 This packages provides functions to retrieve and prepare poll result data from the DAWUM API (dawum.de). Data is under the ODC-ODbL license.
 
+This packages provides functions to retrieve and prepare poll result data from the DAWUM API (dawum.de). Data is under the ODC-ODbL license.
 }
 \details{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
