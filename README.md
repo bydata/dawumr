@@ -51,21 +51,21 @@ The DAWUM database covers polls for the national election in Germany, elections 
 
 This package pulls all available data, but makes no judgement of the quality of the polls or the institutes. It is up to the user to decide which institutes to include in their analyses.
 
-The table provides an overview of elections and institutes covered (as of 2024-02-03):
+The table provides an overview of elections and institutes covered (as of 2024-12-28):
 
-| Institute_Name_grp         | Bundestag |  EU |  BW |  BY |  BE |  BB |  HB |  HH |  HE |  MV |  NI | NRW |  RP |  SL |  SN |  ST |  SH |  TH |
-|:---------------------------|----------:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|
-| Allensbach                 |        88 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   3 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
-| Civey                      |       112 |   4 |   1 |  31 |  18 |   6 |   0 |   4 |   7 |   1 |   4 |   6 |   1 |   0 |  11 |   1 |   1 |   5 |
-| Forsa                      |       362 |   1 |   2 |  13 |  37 |   7 |   0 |   3 |   1 |   9 |  10 |  15 |   1 |   1 |   1 |   0 |   0 |   2 |
-| Forschungsgruppe Wahlen    |       137 |   7 |   3 |   6 |   4 |   2 |   5 |   2 |  10 |   2 |   4 |   5 |   3 |   4 |   2 |   2 |   4 |   2 |
-| GMS                        |        63 |   0 |   0 |  41 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   1 |   0 |   0 |
-| Infratest dimap            |       170 |   5 |  20 |  19 |  19 |  16 |   8 |   6 |  14 |  10 |  12 |  23 |  27 |   8 |   7 |   6 |  12 |  14 |
-| INSA                       |       511 |   9 |  16 |  21 |  24 |  10 |   5 |   2 |  11 |  10 |  13 |  14 |   9 |   7 |  14 |   9 |  11 |  40 |
-| Institut Wahlkreisprognose |        46 |   3 |  11 |  20 |  17 |   9 |  12 |   3 |  22 |   7 |  16 |  14 |   8 |   8 |  10 |   5 |  12 |   8 |
-| Verian (Emnid)             |       351 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
-| YouGov                     |        92 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   5 |   0 |   0 |   0 |   0 |   0 |   0 |
-| Other\*                    |        54 |   1 |   0 |   0 |   0 |   3 |   1 |  10 |   0 |   0 |   1 |   2 |   1 |   0 |   7 |   1 |   0 |   0 |
+|Institute Name             | Bundestag| EU| BW| BY| BE| BB| HB| HH| HE| MV| NI| NRW| RP| SL| SN| ST| SH| TH|
+|:--------------------------|---------:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|---:|--:|--:|--:|--:|--:|--:|
+|Allensbach                 |        99|  0|  0|  0|  0|  0|  0|  0|  0|  0|  5|   0|  0|  0|  0|  0|  0|  0|
+|Civey                      |       112|  4|  1| 33| 18|  6|  0|  4|  7|  1|  4|   6|  1|  0| 12|  1|  1|  5|
+|Forsa                      |       410|  2|  2| 14| 37|  7|  0|  4|  2| 10| 10|  18|  1|  1|  3|  0|  0|  4|
+|Forschungsgruppe Wahlen    |       154| 12|  3|  6|  4|  4|  5|  2| 10|  2|  4|   5|  3|  4|  5|  2|  4|  5|
+|GMS                        |        69|  0|  0| 44|  0|  0|  0|  0|  0|  0|  0|   0|  0|  0|  0|  1|  0|  0|
+|Infratest dimap            |       183|  7| 23| 19| 21| 21|  8|  8| 15| 12| 13|  25| 30|  9|  9|  6| 12| 17|
+|INSA                       |       604| 16| 21| 22| 25| 15|  5|  2| 13| 13| 14|  14|  9|  7| 18| 13| 11| 47|
+|Institut Wahlkreisprognose |        52|  7| 11| 20| 17| 14| 12|  4| 22|  7| 16|  14|  8|  9| 13|  5| 12| 10|
+|Verian (Emnid)             |       364|  0|  0|  0|  0|  0|  0|  0|  0|  0|  0|   0|  0|  0|  0|  0|  0|  0|
+|YouGov                     |       103|  1|  0|  0|  0|  0|  0|  0|  0|  0|  0|   5|  0|  0|  0|  0|  0|  0|
+|Other*                     |        65|  3|  0|  0|  0|  3|  1| 11|  0|  0|  1|   2|  1|  0|  7|  1|  0|  0|
 
 \* Other: Institutes are named in the dataset and are grouped for this overview only.
 
