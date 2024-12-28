@@ -1,3 +1,4 @@
 # dawumr (development version)
 
-* Initial CRAN submission.
+* Export only `pull_dawum()` and `pull_dawum_dataframe()`
+
