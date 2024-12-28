@@ -69,6 +69,10 @@ The table provides an overview of elections and institutes covered (as of 2024-1
 
 \* Other: Institutes are named in the dataset and are grouped for this overview only.
 
+## Versions
+
+See [NEWS](NEWS.md)
+
 ## Contributions
 
 Many thanks to [\@timonscheuer](https://github.com/timonscheuer) for the inspiration and support with early bugfixing.
