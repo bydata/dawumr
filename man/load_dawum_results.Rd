@@ -4,13 +4,16 @@
 \alias{load_dawum_results}
 \title{Load Result Data from DAWUM}
 \usage{
-load_dawum_results(newest_only = FALSE, verbose = TRUE)
+load_dawum_results(newest_only = FALSE, cast = TRUE, verbose = TRUE)
 }
 \arguments{
 \item{newest_only}{Logical. Retrieve only the newest data per institute and
 parliament/election.}
 
-\item{verbose}{Logical. Should messages be printed? Default: TRUE}
+\item{cast}{Logical. Cast columns to integers and dates where applicable.
+Default: TRUE}
+
+\item{verbose}{Logical. Print message while retrieving data. Default: TRUE}
 }
 \value{
 A data frame with the survey results

@@ -58,16 +58,25 @@ load_dawum_db <- function(newest_only = FALSE, denormalize = FALSE, verbose = TR
 #'     the poll result for a party.
 #' @param newest_only Logical. Retrieve only the newest data per institute and
 #'     parliament/election.
-#' @param verbose Logical. Should messages be printed? Default: TRUE
+#' @param cast Logical. Cast columns to integers and dates where applicable. 
+#'     Default: TRUE
+#' @param verbose Logical. Print message while retrieving data. Default: TRUE
 #'
 #' @return A data frame with the survey results
 #' @export
 #'
 #' @examples \dontrun{load_dawum_results()}
-load_dawum_results <- function(newest_only = FALSE, verbose = TRUE) {
+load_dawum_results <- function(newest_only = FALSE,
+                               cast = TRUE,
+                               verbose = TRUE) {
+  
   obj <- load_dawum_db(newest_only = newest_only, denormalize = TRUE, verbose = verbose)
-  obj$Result$Date <- as.Date(obj$Result$Date)
-  obj$Result$Survey_Period_Start <- as.Date(obj$Result$Survey_Period_Start)
-  obj$Result$Survey_Period_End <- as.Date(obj$Result$Survey_Period_End)
+  
+  if (cast) {
+    obj$Result$Date <- as.Date(obj$Result$Date)
+    obj$Result$Survey_Period_Start <- as.Date(obj$Result$Survey_Period_Start)
+    obj$Result$Survey_Period_End <- as.Date(obj$Result$Survey_Period_End)
+    obj$Result$Surveyed_Persons <-  as.integer(obj$Result$Surveyed_Persons)
+  }
   return(obj$Result)
 }
