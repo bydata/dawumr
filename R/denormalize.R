@@ -3,7 +3,8 @@
 #' @param x A list object with the DAWUM database
 #' @param drop_id_vars Shall the ID variables (e.g. Party ID, Parliament ID) be
 #'     dropped after adding the corresponding names? Default: TRUE
-#'
+#'     
+#' @noRd
 #' @return A list object with the DAWUM database, the Result object is denormalized
 denormalize <- function(x, drop_id_vars = TRUE) {
   results <- x$Results

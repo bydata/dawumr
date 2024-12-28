@@ -14,8 +14,8 @@ A list object with the full data provided by the API
 }
 \description{
 Pull data from the API endpoint provided by DAWUM (https://dawum.de/).
-    Data from dawum.de (License: ODC-ODbL). For the API documentation, refer to
-    https://dawum.de/API/
+Data from dawum.de (License: ODC-ODbL). For the API documentation, refer to
+https://dawum.de/API/
 }
 \examples{
 \dontrun{retrieve_data()}

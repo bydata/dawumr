@@ -17,9 +17,9 @@ A list object with the full data provided by the API
 }
 \description{
 Pull only the newest data per institute and parliament/election
-    from the API endpoint provided by DAWUM (https://dawum.de/).
-    Data from dawum.de (License: ODC-ODbL). For the API documentation, refer to
-    https://dawum.de/API/
+from the API endpoint provided by DAWUM (https://dawum.de/).
+Data from dawum.de (License: ODC-ODbL). For the API documentation, refer to
+https://dawum.de/API/
 }
 \examples{
 \dontrun{retrieve_newest_data()}

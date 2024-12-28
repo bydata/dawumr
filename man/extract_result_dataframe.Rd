@@ -14,7 +14,7 @@ A data frame with the results from a survey
 }
 \description{
 Extract survey result data from Survey list object.
-    Each record represents the survey result for a party.
+Each record represents the survey result for a party.
 }
 \examples{
 \dontrun{extract_result_dataframe(x)}
