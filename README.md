@@ -23,26 +23,21 @@ devtools::install_github("https://github.com/bydata/dawumr/")
 
 The typical use case is probably to pull all survey results as a data frame.
 
-```{r}
-# Pull all available data, return only the data frame with the poll results
-dawum_df <- pull_dawum_dataframe()
-```
+Pull only the latest results by election and institute:
 
-Set the argument `newest_only` to TRUE to pull only the latest results by election and institute.
-
-```{r}
+```r
 # Pull only the most recent polls for each election and institute
-dawum_db <- pull_dawum_dataframe(newest_only = TRUE)
+dawum_df_latest <- load_dawum_results(newest_only = TRUE)
 ```
 
-You can also get the database as a list object with separate tables for institutes, parliaments etc. so that you can join tables for your specific purposes.
+Pull data as a list object with the database with separate tables for institutes, parliaments, etc.:
 
-```{r}
+```r
 # Pull all available data
-dawum_db <- pull_dawum()
+dawum_db <- load_dawum_db()
 
 # Pull only the most recent polls for each parliament and institute
-dawum_df <- pull_dawum(newest_only = TRUE)
+dawum_db_latest <- load_dawum_db(newest_only = TRUE)
 ```
 
 ## Institutes and Parliaments

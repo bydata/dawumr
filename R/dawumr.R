@@ -10,9 +10,9 @@
 #' @examples
 #' \dontrun{
 #' # Pull all available poll data as a data frame:
-#' dawum_df <- pull_dawum_dataframe()
+#' dawum_df <- load_dawum_results()
 #'
 #' # Pull only the latest results by election and institute:
-#' dawum_df <- pull_dawum_dataframe(newest_only = TRUE)
+#' dawum_df <- load_dawum_results(newest_only = TRUE)
 #' }
 "_PACKAGE"

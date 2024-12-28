@@ -1,5 +1,5 @@
 ---
-title: "R API for DAWUM (Darstellung und Auswertung von Wahlumfragen)"
+title: "Using the dawumr Package"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Using the dawumr Package}
@@ -28,24 +28,24 @@ Pull all survey results as a data frame:
 
 ```r
 # Pull all available data, return only the data frame with the poll results
-dawum_df <- pull_dawum_dataframe()
+dawum_df <- load_dawum_results()
 ```
 
 Pull only the latest results by election and institute:
 
 ```r
 # Pull only the most recent polls for each election and institute
-dawum_db <- pull_dawum_dataframe(newest_only = TRUE)
+dawum_df_latest <- load_dawum_results(newest_only = TRUE)
 ```
 
-Pull data as a list object with separate tables for institutes, parliaments, etc.:
+Pull data as a list object with the database with separate tables for institutes, parliaments, etc.:
 
 ```r
 # Pull all available data
-dawum_db <- pull_dawum()
+dawum_db <- load_dawum_db()
 
 # Pull only the most recent polls for each parliament and institute
-dawum_df <- pull_dawum(newest_only = TRUE)
+dawum_db_latest <- load_dawum_db(newest_only = TRUE)
 ```
 
 ## Institutes and Parliaments

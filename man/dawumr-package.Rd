@@ -7,7 +7,6 @@
 \description{
 This packages provides functions to retrieve and prepare poll result data from the DAWUM API (dawum.de). Data is under the ODC-ODbL license.
 
-This packages provides functions to retrieve and prepare poll result data from the DAWUM API (dawum.de). Data is under the ODC-ODbL license.
 }
 \details{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
@@ -20,10 +19,10 @@ Data from \href{https://dawum.de/}{dawum.de}. Open Database License (ODC-ODbL): 
 \examples{
 \dontrun{
 # Pull all available poll data as a data frame:
-dawum_df <- pull_dawum_dataframe()
+dawum_df <- load_dawum_results()
 
 # Pull only the latest results by election and institute:
-dawum_df <- pull_dawum_dataframe(newest_only = TRUE)
+dawum_df <- load_dawum_results(newest_only = TRUE)
 }
 }
 \keyword{internal}
