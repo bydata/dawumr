@@ -52,8 +52,8 @@ This package includes all available data, but makes no judgement regarding the q
 
 The table gives an overview of the elections and institutes covered (as of 2024-12-28):
 
-| Institute_Name_grp         | Total | Bundestag |  EU |  BW |  BY |  BE |  BB |  HB |  HH |  HE |  MV |  NI | NRW |  RP |  SL |  SN |  ST |  SH |  TH |
-|:---------------------------|------:|----------:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|----:|
+| Institute                  | Total | Bundestag |  EU |  BW |  BY |  BE |  BB |  HB |  HH |  HE |  MV |  NI | NRW |  RP |  SL |  SN |  ST |  SH |  TH |
+|:-----|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Allensbach                 |   104 |        99 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |   5 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
 | Civey                      |   216 |       112 |   4 |   1 |  33 |  18 |   6 |   0 |   4 |   7 |   1 |   4 |   6 |   1 |   0 |  12 |   1 |   1 |   5 |
 | Forsa                      |   525 |       410 |   2 |   2 |  14 |  37 |   7 |   0 |   4 |   2 |  10 |  10 |  18 |   1 |   1 |   3 |   0 |   0 |   4 |
